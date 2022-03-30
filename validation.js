@@ -1,7 +1,11 @@
 var cuentas = [
+  
     { nombre: "Hiromi", saldo: 200, password: 'helloworld' },
     { nombre: "Manuel", saldo: 290, password: 'l33t' },
+    { nombre: "Zai", saldo: 67, password: '1234' },
+    { nombre: "Anahi", saldo: 67, password: '1235' },
     { nombre: "Luis", saldo: 67, password: '123' }
+    
   ];
 
 
@@ -9,19 +13,21 @@ var cuentas = [
   let named = document.getElementById('inputName');
   let password = document.getElementById('inputPassword');
   let login = document.getElementById('login');
-  let texto = document.getElementById('texto');
-
+  let alerta = document.getElementById('alerta');
+  let cuenta;
 function compare(){
-    
+    let okay;
+    cuenta = cuentas.find(cuenta => {
+      if(cuenta.nombre === named.value && cuenta.password === password.value){
+        localStorage.setItem("cuenta",JSON.stringify(cuenta));
+        window.location.assign("profile.html");
 
-    let cuenta = cuentas.find(cuenta => cuenta.nombre === named.value && cuenta.password === password.value)
+      }else{
+        alerta.innerHTML = 'Cuenta no encontrada';
+      }
+    })
     
-
-    //window.location.assign("profile.html");
-    
-
-   
 }
 
 login.addEventListener('click', compare);
-console.log(named)
+

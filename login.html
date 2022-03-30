@@ -12,11 +12,11 @@
     </head>
 
     <body>
-        <h1 class="m-5 text-center">BIENVENIDO A-</h1>
+        <h1 class="m-5 text-center">BIENVENIDO A</h1>
         <h3 class="m-5 text-center">Tu Banko</h3>
         <div class="row d-flex justify-content-center">
             <div class="col-5">
-                <form>
+                <!-- <form> -->
                     <div class="mb-3">
                         <label for="inputName" class="form-label">Nombre</label>
                         <input type="name" class="form-control" id="inputName">
@@ -26,11 +26,13 @@
                         <label for="inputPassword" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" id="inputPassword">
                     </div>
+
+                    <p class="text-danger" id="alerta"></p>
                    
-                        <button type="submit" class="btn btn-primary" id="login">Login</button>
-                        <p id="texto"></p>
+                    <button type="submit" class="btn btn-primary" id="login">Login</button>
+                       
                         
-                </form>
+                <!-- </form> -->
             </div>
         </div>
         <!-- JavaScript Bundle with Popper -->
@@ -39,6 +41,8 @@
             crossorigin="anonymous"></script>
         <script src="./main.js"></script>    
         <script src="./validation.js"></script>  
+      
+        
     </body>
 
 </html>
