@@ -6,21 +6,22 @@ var cuentas = [
 
 
   //console.log(cuenta.password)
+  let named = document.getElementById('inputName');
+  let password = document.getElementById('inputPassword');
+  let login = document.getElementById('login');
+  let texto = document.getElementById('texto');
 
+function compare(){
+    
 
-// function compare(){
-//     let named = document.getElementById('inputName');
-//     let password = document.getElementById('inputPassword');
-//     let login = document.getElementById('login');
-//     let texto = document.getElementById('texto');
-//     let cuenta = cuentas.find(cuenta => cuenta.nombre === named.value && cuenta.password === password.value)
-//     window.location.assign("profile.html");
+    let cuenta = cuentas.find(cuenta => cuenta.nombre === named.value && cuenta.password === password.value)
+    
+
+    //window.location.assign("profile.html");
     
 
    
-// }
-let login = document.getElementById('login');
-login.addEventListener('click', function(){
-    window.location.href = "profile.html";
-    console.log(window.location.href)
-});
+}
+
+login.addEventListener('click', compare);
+console.log(named)
