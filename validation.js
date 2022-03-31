@@ -21,11 +21,15 @@ function compare(){
       if(cuenta.nombre === named.value && cuenta.password === password.value){
         localStorage.setItem("cuenta",JSON.stringify(cuenta));
         window.location.assign("profile.html");
-
-      }else{
-        alerta.innerHTML = 'Cuenta no encontrada';
       }
+      // }else{
+      //   alerta.innerHTML = 'Cuenta no encontrada';
+      // }
     })
+
+    if (cuenta.nombre !== named.value && cuenta.password !== password.value){
+      alerta.innerHTML = 'Cuenta no encontrada';
+    }
     
 }
 
